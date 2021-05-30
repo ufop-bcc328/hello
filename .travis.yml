@@ -17,9 +17,10 @@ notifications:
 before_install:
   - ls -l ~
   - rm -rf ~/.opam
+  - opam init -y
   - opam --version
   - opam switch list-available base
-  - opam init -y --compiler=4.11.1
+  #- opam init -y --compiler=4.11.1
   - eval `opam config env`
   - opam install -y dune alcotest
   - sudo chmod +x compile.sh
