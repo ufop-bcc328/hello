@@ -15,8 +15,8 @@ notifications:
   email: false
 
 before_install:
-  - ls -l ~/.opam
-  - rm -f ~/.opam
+  - ls -l ~
+  - rm -rf ~/.opam
   - opam --version
   - opam switch list-available base
   - opam init -y --compiler=4.11.1
