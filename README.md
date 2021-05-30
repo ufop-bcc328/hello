@@ -1,2 +1,3 @@
 # hello
-Hello world in OCaml
+
+This is a simple Hello World application using OCaml.
