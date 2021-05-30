@@ -2,7 +2,7 @@ language: minimal
 
 os: linux
 
-# dist: focal
+dist: hirsute
 
 cache:
   directories:
@@ -15,7 +15,9 @@ notifications:
   email: false
 
 before_install:
-  - opam init -y
+  - opam --version
+  - opam switch list-available base
+  - opam init -y --compiler=4.11.1
   - eval `opam config env`
   - opam install -y dune alcotest
   - sudo chmod +x compile.sh
@@ -23,7 +25,7 @@ before_install:
 matrix:
   include:
     - os: linux
-      # dist: focal
+      dist: hirsute
       addons:
         apt:
           packages:
