@@ -2,7 +2,7 @@ language: minimal
 
 os: linux
 
-dist: hirsute
+dist: focal
 
 cache:
   directories:
@@ -25,7 +25,7 @@ before_install:
 matrix:
   include:
     - os: linux
-      dist: hirsute
+      dist: focal
       addons:
         apt:
           packages:
